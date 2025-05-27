@@ -10,9 +10,9 @@ st.set_page_config(page_title="Text-to-Image Retrieval", layout="wide")
 st.title("🔍 Text-to-Image Retrieval using CLIP + FastAPI")
 
 
-query_text = st.text_input("Nhập vào tên con vật muốn kiếm", value="a tigertiger")
+query_text = st.text_input("Nhập vào tên con vật muốn kiếm", value="a tiger")
 
-top_k = st.slider("Xuất hiện số lượng k ảnh có điểm tương đồngđồng", min_value=1, max_value=MAX_IMAGES, value=5)
+top_k = st.slider("Xuất hiện số lượng k ảnh có điểm tương đồng", min_value=1, max_value=MAX_IMAGES, value=5)
 
 if st.button("Tìm kiếm"):
     if not query_text.strip():
@@ -33,6 +33,6 @@ if st.button("Tìm kiếm"):
                     except Exception as e:
                         cols[i].error(f"Không thể xuất ảnh: {img_path}")
             else:
-                st.info("Không có ảnh phù hợphợp")
+                st.info("Không có ảnh phù hợp")
         else:
-            st.error("Không kết nối được với APIAPI")
+            st.error("Không kết nối được với API")
