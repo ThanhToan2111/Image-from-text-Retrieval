@@ -1,9 +1,5 @@
 fastapi
 uvicorn
-transformers
 torch
+transformers
 faiss-cpu
-numpy
-pillow
-streamlit
-psycopg2-binary
